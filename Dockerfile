@@ -37,7 +37,7 @@ VOLUME ["/opt/osrm/data","/opt/osrm/profile"]
 WORKDIR /opt/osrm/
 RUN mkdir -p stxxl
 WORKDIR /opt/osrm/osrm-backend/build/
-RUN echo 'disk=/opt/osrm/stxxl/stxxl,25000,syscall' > .stxxl
+RUN echo 'disk=/tmp/stxxl,100000,syscall' > .stxxl
 
 # RUN SCRIPT
 WORKDIR /opt/osrm/
